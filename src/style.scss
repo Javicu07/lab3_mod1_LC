@@ -1,0 +1,48 @@
+@import "mixins.scss";
+
+body{
+    margin: 0px;
+    padding: 0px; 
+    width: 100vw;
+    height: 100vh;
+
+    .flex-container{ 
+    margin: 5px;
+    padding: 5px;       
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: flex-start;
+    flex-grow: 1;
+
+   
+
+    @media screen and (max-width: 486px){
+        width: auto;
+        height: auto;
+        padding-right: 15px;
+        flex-direction: column;
+        align-items: stretch;
+        align-content: center;
+        border: 3px solid black;
+        
+        & > div{
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    & > div{
+        
+        
+        width: 100%;
+        padding: 5px;
+        margin: 0px;
+        background-color: darkcyan;
+        
+        &:hover{
+            background-color: blue;
+        }
+    }
+}
+}
